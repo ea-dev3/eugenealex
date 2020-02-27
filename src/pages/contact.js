@@ -29,17 +29,29 @@ const ContactPage = () => (
         <label className="form-item">
           Pick an Option:
           <select id="service" name="services">
-            <option value="Frontend Development">Frontend Development </option>
-            <option value="Backend Development">Backend Development </option>
-            <option value="Full Stack Development">
-              Full Stack Develoment{" "}
+            <option value="WebsiteInOneDay">
+              {" "}
+              Website in 1 day for ksh.10,000
             </option>
-            <option value="DevOps">DevOps </option>
+            <option value="WebAppInTwoWeeks">
+              WebApp in 2 weeks for ksh.50,000{" "}
+            </option>
+            <option value="HybridAppAsItGrows">
+              HybridApp as it grows for stock or contractual payout{" "}
+            </option>
+            <option value="DevOpsConsultation">
+              DevOps Consultation for contractual payout{" "}
+            </option>
           </select>
         </label>
         <label className="form-item">
           Message
-          <textarea name="message" id="message" rows="5" />
+          <textarea
+            name="message"
+            id="message"
+            rows="5"
+            placeholder="Add more infomation"
+          />
         </label>
         <input type="submit" value="Submit" />
         <input type="reset" value="Clear" />
