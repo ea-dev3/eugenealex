@@ -14,19 +14,23 @@ const ContactPage = () => (
       <SEO title="Contact" />
       <form
         method="post"
-        netlify-honeypot="bot-field"
+        data-netlify-honeypot="bot-field"
         data-netlify="true"
         className="form-container"
+        name="contact"
+        action="/"
       >
-        <label className="form-item">
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="contact" />
+        <label className="form-item" htmlFor="name">
           Full Name
           <input type="text" name="name" id="name" />
         </label>
-        <label className="form-item">
+        <label className="form-item" htmlFor="email">
           Email
           <input type="email" name="email" id="email" />
         </label>
-        <label className="form-item">
+        <label className="form-item" htmlFor="services">
           Pick an Option:
           <select id="service" name="services">
             <option value="WebsiteInOneDay">
@@ -44,7 +48,7 @@ const ContactPage = () => (
             </option>
           </select>
         </label>
-        <label className="form-item">
+        <label className="form-item" htmlFor="message">
           Message
           <textarea
             name="message"
